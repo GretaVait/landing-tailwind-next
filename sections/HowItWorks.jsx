@@ -1,5 +1,7 @@
+import { useRouter } from "next/router"
 
 const HowItWorks = () => {
+  const router = useRouter()
 
   return (
     <section>
@@ -26,7 +28,7 @@ const HowItWorks = () => {
         />
 
         <div className="text-center">
-          <button>Create your plan</button>
+          <button onClick={() => { router.push('/create-plan') }}>Create your plan</button>
         </div>
 
       </div>
