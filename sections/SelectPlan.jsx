@@ -1,11 +1,27 @@
 import { useState } from "react"
+// import { FixedSizeList as List } from 'react-window'
 
 const SelectPlan = () => {
   const [preference, setPreference] = useState({
     title: '',
     id: -1
   })
-  
+  // const [type, setType] = useState({
+  //   title: '',
+  //   id: -1
+  // })
+  // const [grams, setGrams] = useState({
+  //   title: '',
+  //   id: -1
+  // })
+  // const [grind, setGrind] = useState({
+  //   title: '',
+  //   id: -1
+  // })
+  // const [frequency, setFrequency] = useState({
+  //   title: '',
+  //   id: -1
+  // })
 
   const optionsArr = {
     preference: [
@@ -21,7 +37,63 @@ const SelectPlan = () => {
         title: 'Espresso',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
-    ]
+    ],
+    // type: [
+    //   {
+    //     title: 'Single Origin',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Decaf',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Blended',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    // ],
+    // grams: [
+    //   {
+    //     title: '250g',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: '500g',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: '1000g',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    // ],
+    // grind: [
+    //   {
+    //     title: 'Wholebean',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Filter',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Cafeterie',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    // ],
+    // frequency: [
+    //   {
+    //     title: 'Every week',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Every 2 weeks',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    //   {
+    //     title: 'Every month',
+    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    //   },
+    // ],
   }
 
   return (
@@ -35,7 +107,41 @@ const SelectPlan = () => {
         setOptions={setPreference}
       />
         
-      
+      {/* <Card 
+        title="What type of coffee?" 
+        optionsArr={optionsArr.type} 
+        options={type} 
+        setOptions={setType}
+      />
+        
+      <Card 
+        title="How much would you like?" 
+        optionsArr={optionsArr.grams} 
+        options={grams} 
+        setOptions={setGrams}
+      />
+        
+      <Card 
+        title="Want us to grind them?" 
+        optionsArr={optionsArr.grind} 
+        options={grind} 
+        setOptions={setGrind}
+      />
+        
+      <Card 
+        title="How often should we deliver?" 
+        optionsArr={optionsArr.frequency} 
+        options={frequency} 
+        setOptions={setFrequency}
+      /> */}
+
+      {/* {
+        preference.title && type.title && grams.title && grind.title && frequency.title &&
+          <div className="bg-black p-8 rounded-lg">
+            <p className="uppercase text-grey mb-4">Order summary</p>
+            <h2 className="text-white-yellow">"I drink my coffee as <span className="text-green">{preference.title}</span>, with a <span className="text-green">{type.title}</span> type of bean. <span className="text-green">{grams.title}</span> ground ala <span className="text-green">{grind.title}</span>, sent to me <span className="text-green">{frequency.title}</span>."</h2>
+          </div>
+      } */}
 
       </div>
     </section>
