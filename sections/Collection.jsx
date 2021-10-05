@@ -30,13 +30,13 @@ const Collection = ({ collection }) => {
 const CoffeeCard = ({ image, name, description }) => (
   <div className="text-center mb-12">
     <div className="relative w-32 h-32 mx-auto mb-8">
-      {/* <Image 
+      <Image 
         src={image}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
         alt=""
-      /> */}
+      />
     </div>
 
     <h2 className="mb-4">{name}</h2>
