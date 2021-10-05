@@ -5,7 +5,7 @@ const Collection = ({ collection }) => {
   return (
     <section>
       <div className="container">
-        <div className="relative">
+        <div className="relative h-full">
           <h1 className="text-center mb-16">our collection</h1>
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-white-yellow to-transparent" />
         </div>

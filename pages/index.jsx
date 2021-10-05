@@ -2,6 +2,7 @@ import Head from 'next/head'
 // Lib
 import axios from 'axios'
 import Collection from '../sections/Collection'
+import Intro from '../sections/Intro'
 
 export default function Home({ collection }) {
   return (
@@ -14,8 +15,9 @@ export default function Home({ collection }) {
 
       <main>
 
+        <Intro />
+
         <Collection collection={collection} />
-        {/* <p>Collection</p> */}
 
       </main>
     </div>
