@@ -21,6 +21,7 @@ module.exports = {
       sm: ['24px', '32px'],
       base: ['16px', '24px'],
       lg: ['32px', '40px'],
+      xl: ['64px', '72px'],
     },
     colors: {
       transparent: 'transparent',

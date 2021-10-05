@@ -3,6 +3,7 @@ import Head from 'next/head'
 import axios from 'axios'
 import Collection from '../sections/Collection'
 import Intro from '../sections/Intro'
+import HowItWorks from '../sections/HowItWorks'
 
 export default function Home({ collection }) {
   return (
@@ -18,6 +19,8 @@ export default function Home({ collection }) {
         <Intro />
 
         <Collection collection={collection} />
+
+        <HowItWorks />
 
       </main>
     </div>
