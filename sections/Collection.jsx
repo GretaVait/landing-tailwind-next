@@ -17,6 +17,7 @@ const Collection = ({ collection }) => {
                 image={item.image}
                 name={item.name}
                 description={item.description}
+                id={index}
                 key={index}
               />
             ))
@@ -27,8 +28,8 @@ const Collection = ({ collection }) => {
   )
 }
 
-const CoffeeCard = ({ image, name, description }) => (
-  <div className="text-center mb-12">
+const CoffeeCard = ({ image, name, description, id }) => (
+  <div className={`text-center ${id < 3 ? 'mb-12' : ''}`}>
     <div className="relative w-32 h-32 mx-auto mb-8">
       <Image 
         src={image}
