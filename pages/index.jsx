@@ -14,20 +14,21 @@ export default function Home({ collection }) {
 
       <main>
 
-        <Collection collection={collection} />
+        {/* <Collection collection={collection} /> */}
+        <p>Collection</p>
 
       </main>
     </div>
   )
 }
 
-export async function getServerSideProps() {
-  const collection = await axios.get(`https://api.jsonbin.io/b/615bf57caa02be1d44544017/4`, {
-    headers: {"secret-key": `${process.env.SECRET_KEY}`}
-  })
-  return {
-    props: {
-      collection: collection.data
-    }
-  }
-}
+// export async function getServerSideProps() {
+//   const collection = await axios.get(`https://api.jsonbin.io/b/615bf57caa02be1d44544017/4`, {
+//     headers: {"secret-key": `${process.env.SECRET_KEY}`}
+//   })
+//   return {
+//     props: {
+//       collection: collection.data
+//     }
+//   }
+// }
