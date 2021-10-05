@@ -21,6 +21,19 @@ module.exports = {
       sm: ['24px', '32px'],
       base: ['16px', '24px'],
       lg: ['32px', '40px'],
+    },
+    colors: {
+      transparent: 'transparent',
+      black: "#2E373C",
+      green: "#0E8685",
+      white: {
+        yellow: "#FEFBF6",
+        DEFAULT: "#FFF"
+      },
+      grey: {
+        DEFAULT: "#D5D9DC",
+        dark: "#838793",
+      },
     }
   },
   variants: {
