@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 // Lib
 import axios from 'axios'
 // Image
 import IntroImg from '/public/images/1.jpg'
 // Sections
 import Intro from '../../sections/Intro'
-import SelectPlan from '../../sections/SelectPlan'
-import HowItWorks from '../../sections/HowItWorks'
+const SelectPlan = dynamic(() => import('../../sections/SelectPlan'))
+const HowItWorks = dynamic(() => import('../../sections/HowItWorks'))
+// import SelectPlan from '../../sections/SelectPlan'
+// import HowItWorks from '../../sections/HowItWorks'
 
 export default function CreatePlan() {
   return (

@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 // Lib
 import axios from 'axios'
-import Collection from '../sections/Collection'
+// import Collection from '../sections/Collection'
+const Collection = dynamic(() => import('../sections/Collection'))
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
 

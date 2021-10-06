@@ -1,8 +1,10 @@
 import { useState } from "react"
+import dynamic from 'next/dynamic'
 // import { FixedSizeList as List } from 'react-window'
 import { loadStripe } from "@stripe/stripe-js"
 import { Elements } from "@stripe/react-stripe-js"
-import Checkout from "../components/Checkout"
+// import Checkout from "../components/Checkout"
+const Checkout = dynamic(() => import('../components/Checkout'))
 
 const stripePromise = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY}`)
 
