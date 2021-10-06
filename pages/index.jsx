@@ -31,7 +31,7 @@ export default function Home({ collection }) {
 }
 
 export async function getServerSideProps() {
-  const collection = await axios.get(`https://api.jsonbin.io/b/615bf57caa02be1d44544017/5`, {
+  const collection = await axios.get(`https://api.jsonbin.io/b/615bf57caa02be1d44544017/6`, {
     headers: {"secret-key": `${process.env.SECRET_KEY}`}
   })
   return {

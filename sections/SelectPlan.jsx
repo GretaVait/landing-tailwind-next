@@ -1,7 +1,14 @@
 import { useState } from "react"
 // import { FixedSizeList as List } from 'react-window'
+import { loadStripe } from "@stripe/stripe-js"
+import { Elements } from "@stripe/react-stripe-js"
+import Checkout from "../components/Checkout"
+
+const stripePromise = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY}`)
 
 const SelectPlan = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+
   const [preference, setPreference] = useState({
     title: '',
     id: -1
@@ -98,6 +105,7 @@ const SelectPlan = () => {
 
   return (
     <section>
+      <div className={`fixed top-0 left-0 w-full h-full bg-black z-10 pointer-events-none transition duration-200 ${modalOpen ? 'opacity-50' : 'opacity-0'}`} />
       <div className="container">
         
       <Card 
@@ -142,6 +150,17 @@ const SelectPlan = () => {
             <h2 className="text-white-yellow">"I drink my coffee as <span className="text-green">{preference.title}</span>, with a <span className="text-green">{type.title}</span> type of bean. <span className="text-green">{grams.title}</span> ground ala <span className="text-green">{grind.title}</span>, sent to me <span className="text-green">{frequency.title}</span>."</h2>
           </div>
       } */}
+
+      <div className={`fixed top-1/2 left-1/2 transform -translate-x-2/4 -translate-y-2/4 bg-white px-4 py-16 w-full max-w-lg opacity-0 transition duration-200 z-20 ${modalOpen ? 'opacity-100' : ''}`}>
+        <Elements stripe={stripePromise}>
+          <Checkout closeModal={() => { setModalOpen(false) }} />
+        </Elements>
+      </div>
+
+      
+      <div className="text-center">
+        <button onClick={() => { setModalOpen(true) }}>Buy Coffee</button>
+      </div>
 
       </div>
     </section>
