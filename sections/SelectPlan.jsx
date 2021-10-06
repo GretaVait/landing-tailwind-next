@@ -1,7 +1,7 @@
 import { useState } from "react"
 import dynamic from 'next/dynamic'
 // import { FixedSizeList as List } from 'react-window'
-import { loadStripe } from "@stripe/stripe-js"
+import { loadStripe } from "@stripe/stripe-js/pure"
 import { Elements } from "@stripe/react-stripe-js"
 // import Checkout from "../components/Checkout"
 const Checkout = dynamic(() => import('../components/Checkout'))
