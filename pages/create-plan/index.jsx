@@ -7,12 +7,13 @@ import axios from 'axios'
 import IntroImg from '/public/images/1.jpg'
 // Sections
 import Intro from '../../sections/Intro'
+import SelectPlan1 from '../../sections/SelectPlan1'
 const SelectPlan = dynamic(() => import('../../sections/SelectPlan'))
 const HowItWorks = dynamic(() => import('../../sections/HowItWorks'))
 // import SelectPlan from '../../sections/SelectPlan'
 // import HowItWorks from '../../sections/HowItWorks'
 
-export default function CreatePlan() {
+export default function CreatePlan({ selection }) {
   return (
     <div>
       <Head>
@@ -31,20 +32,20 @@ export default function CreatePlan() {
 
         <HowItWorks />
 
-        <SelectPlan />
+        <SelectPlan1 selection={selection} />
 
       </main>
     </div>
   )
 }
 
-// export async function getServerSideProps() {
-//   const collection = await axios.get(`https://api.jsonbin.io/b/615bf57caa02be1d44544017/4`, {
-//     headers: {"secret-key": `${process.env.SECRET_KEY}`}
-//   })
-//   return {
-//     props: {
-//       collection: collection.data
-//     }
-//   }
-// }
+export async function getServerSideProps() {
+  const selection = await axios.get(`https://api.jsonbin.io/b/6163f977aa02be1d4457b4ab/7`, {
+    headers: {"secret-key": `${process.env.SECRET_KEY}`}
+  })
+  return {
+    props: {
+      selection: selection.data
+    }
+  }
+}

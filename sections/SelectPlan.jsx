@@ -47,62 +47,62 @@ const SelectPlan = () => {
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
     ],
-    // type: [
-    //   {
-    //     title: 'Single Origin',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Decaf',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Blended',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    // ],
-    // grams: [
-    //   {
-    //     title: '250g',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: '500g',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: '1000g',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    // ],
-    // grind: [
-    //   {
-    //     title: 'Wholebean',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Filter',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Cafeterie',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    // ],
-    // frequency: [
-    //   {
-    //     title: 'Every week',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Every 2 weeks',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    //   {
-    //     title: 'Every month',
-    //     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    //   },
-    // ],
+    type: [
+      {
+        title: 'Single Origin',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Decaf',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Blended',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+    ],
+    grams: [
+      {
+        title: '250g',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: '500g',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: '1000g',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+    ],
+    grind: [
+      {
+        title: 'Wholebean',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Filter',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Cafeterie',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+    ],
+    frequency: [
+      {
+        title: 'Every week',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Every 2 weeks',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+      {
+        title: 'Every month',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      },
+    ],
   }
 
   return (
@@ -153,7 +153,7 @@ const SelectPlan = () => {
           </div>
       } */}
 
-      <div className={`fixed top-1/2 left-1/2 transform -translate-x-2/4 -translate-y-2/4 bg-white px-4 py-16 w-full max-w-lg opacity-0 transition duration-200 z-20 ${modalOpen ? 'opacity-100' : ''}`}>
+      <div className={`fixed top-1/2 left-1/2 transform -translate-x-2/4 -translate-y-2/4 bg-white px-4 py-16 w-full max-w-lg transition duration-200 z-20 ${modalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <Elements stripe={stripePromise}>
           <Checkout closeModal={() => { setModalOpen(false) }} />
         </Elements>
