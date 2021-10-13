@@ -7,7 +7,7 @@ import axios from 'axios'
 import IntroImg from '/public/images/1.jpg'
 // Sections
 import Intro from '../../sections/Intro'
-import SelectPlan1 from '../../sections/SelectPlan1'
+import SelectPlan1 from '../../sections/SelectPlan'
 const SelectPlan = dynamic(() => import('../../sections/SelectPlan'))
 const HowItWorks = dynamic(() => import('../../sections/HowItWorks'))
 // import SelectPlan from '../../sections/SelectPlan'
