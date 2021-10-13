@@ -8,6 +8,7 @@ import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
 import Header from '../components/Header'
 import WhyChooseUs from '../sections/WhyChooseUs'
+import Footer from '../components/Footer'
 
 export default function Home({ collection }) {
   return (
@@ -34,6 +35,8 @@ export default function Home({ collection }) {
         <HowItWorks />
 
       </main>
+
+      <Footer />
     </div>
   )
 }

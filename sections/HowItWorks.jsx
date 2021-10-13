@@ -41,7 +41,7 @@ const HowItWorks = () => {
 
 const Card = ({ index, title, description }) => (
   <div className="text-center mb-12">
-    <h3 className="mb-4 dark:text-white-yellow">0{index}</h3>
+    <h3 className="mb-4 text-orange dark:text-white-yellow">0{index}</h3>
     <h2 className="mb-6 dark:text-white">{title}</h2>
     <p>{description}</p>
   </div>
