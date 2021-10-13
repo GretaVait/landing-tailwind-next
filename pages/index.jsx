@@ -6,6 +6,8 @@ import axios from 'axios'
 const Collection = dynamic(() => import('../sections/Collection'))
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
+import Header from '../components/Header'
+import WhyChooseUs from '../sections/WhyChooseUs'
 
 export default function Home({ collection }) {
   return (
@@ -16,6 +18,8 @@ export default function Home({ collection }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
+
       <main>
 
         <Intro 
@@ -24,6 +28,8 @@ export default function Home({ collection }) {
         />
 
         <Collection collection={collection} />
+
+        <WhyChooseUs />
 
         <HowItWorks />
 

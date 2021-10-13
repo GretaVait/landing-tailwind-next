@@ -18,7 +18,7 @@ module.exports = {
     },
     fontSize: {
       sm: ['24px', '32px'],
-      base: ['16px', '24px'],
+      base: ['14px', '24px'],
       lg: ['32px', '40px'],
       xl: ['64px', '72px'],
     },
@@ -34,6 +34,7 @@ module.exports = {
         DEFAULT: "#D5D9DC",
         dark: "#838793",
       },
+      orange: "#FED5B9",
     }
   },
   variants: {
