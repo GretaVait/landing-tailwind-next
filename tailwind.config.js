@@ -3,9 +3,8 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'lobster': ['Lobster'],
-      'ribeye': ['Ribeye'],
       'roboto': ['Roboto'],
+      'cooper': ['Cooper']
     },
     screens: {
       'sm': '375px',
