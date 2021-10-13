@@ -1,5 +1,5 @@
 const Question = ({ children }) => (
-  <h1 className="mb-8">{children}</h1>
+  <h1 className="mb-8 text-grey-dark">{children}</h1>
 )
 
 const QuestionWrapper = ({ children, onOptionSelect, selectedOptions }) => {

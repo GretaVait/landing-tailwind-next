@@ -3,15 +3,13 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 // Lib
 import axios from 'axios'
-// Image
-import IntroImg from '/public/images/1.jpg'
 // Sections
 import Intro from '../../sections/Intro'
 import SelectPlan1 from '../../sections/SelectPlan'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 const SelectPlan = dynamic(() => import('../../sections/SelectPlan'))
 const HowItWorks = dynamic(() => import('../../sections/HowItWorks'))
-// import SelectPlan from '../../sections/SelectPlan'
-// import HowItWorks from '../../sections/HowItWorks'
 
 export default function CreatePlan({ selection }) {
   return (
@@ -21,6 +19,8 @@ export default function CreatePlan({ selection }) {
         <meta name="description" content="Landing Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
 
       <main className="dark">
 
@@ -32,9 +32,11 @@ export default function CreatePlan({ selection }) {
 
         <HowItWorks />
 
-        <SelectPlan1 selection={selection} />
+        <SelectPlan selection={selection} />
 
       </main>
+
+      <Footer />
     </div>
   )
 }

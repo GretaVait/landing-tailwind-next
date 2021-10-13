@@ -12,10 +12,6 @@ const SelectPlan = ({ selection }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState({})
 
-  useEffect(() => {
-    console.log(selectedOptions)
-  }, [selectedOptions])
-
   return (
     <section>
       <div className={`fixed top-0 left-0 w-full h-full bg-black z-10 pointer-events-none transition duration-200 ${modalOpen ? 'opacity-50' : 'opacity-0'}`} />

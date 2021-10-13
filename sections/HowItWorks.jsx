@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 
-const HowItWorks = () => {
+const HowItWorks = ({ link }) => {
   const router = useRouter()
 
   return (
@@ -30,9 +30,12 @@ const HowItWorks = () => {
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
         />
 
-        <div className="text-center">
-          <button onClick={() => { router.push('/create-plan') }}>Create your plan</button>
-        </div>
+        {
+          link &&
+            <div className="text-center mt-12">
+              <button onClick={() => { router.push(link) }}>Create your plan</button>
+            </div>
+        }
 
       </div>
     </section>
@@ -40,8 +43,8 @@ const HowItWorks = () => {
 }
 
 const Card = ({ index, title, description }) => (
-  <div className="text-center mb-12">
-    <h3 className="mb-4 text-orange dark:text-white-yellow">0{index}</h3>
+  <div className={`text-center ${index === 3 ? 'mb-0' : 'mb-12'}`}>
+    <h3 className="mb-4 text-orange">0{index}</h3>
     <h2 className="mb-6 dark:text-white">{title}</h2>
     <p>{description}</p>
   </div>
