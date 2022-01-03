@@ -48,7 +48,7 @@ const Footer = () => (
 
 const NavLink = ({ link, name }) => (
   <li className="py-2">
-    <Link href={link}><span className="uppercase text-grey-dark font-semibold">{name}</span></Link>
+    <Link passHref href={link}><span className="uppercase text-grey-dark font-semibold">{name}</span></Link>
   </li>
 )
 
